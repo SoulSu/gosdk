@@ -9,13 +9,30 @@ golang sdk 版本管理小工具
 
 
 ```bash
-
-
-
+git clone https://github.com/SoulSu/gosdk.git ~/.gosdk/gosdk/
 ```
 
 
 在 .zshrc 或者 .bashrc 中添加如下初始化脚本
 ```bash
-[ -d ${HOME}/.gosdk/gosdk/gosdk.sh ] && source ${HOME}/.gosdk/gosdk/gosdk.sh && gosdk init
+[ -f ${HOME}/.gosdk/gosdk/gosdk.sh ] && source ${HOME}/.gosdk/gosdk/gosdk.sh && gosdk init
 ```
+
+
+#### 使用方法
+
+##### 查看本地版本
+
+`gosdk l local`
+
+##### 使用指定版本
+
+`gosdk u go1.12.7`
+
+##### 下载指定版本
+
+`gosdk d go1.12.7`
+
+##### 初始化 GOROOT 环境变量
+
+`gosdk init`

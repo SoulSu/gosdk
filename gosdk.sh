@@ -2,9 +2,9 @@
 
 
 # sdk dir
-GOSDK_HOME=~/.gosdk/
+GOSDK_HOME=~/.gosdk/sdk/
 # current sdk dir
-GOSDK_CURRENT=~/.gosdk/current
+GOSDK_CURRENT=~/.gosdk/sdk/current
 
 
 # err code
@@ -14,7 +14,7 @@ GOSDK_CURRENT=~/.gosdk/current
 
 # 全局入口
 gosdk(){
-    currentVersion=$(readlink ${GOSDK_CURRENT})
+    currentVersion=$(readlink ${GOSDK_CURRENT} 2>/dev/null)
     remoteGo="https://golang.google.cn/dl/"
 
 __gosdk_local_list(){
@@ -35,7 +35,7 @@ __gosdk_remote_list(){
 }
 
 __gosdk__init(){
-    [ ! -d ${GO_SDK_HOME} ] && mkdir -p ${GO_SDK_HOME}
+    [ ! -d ${GOSDK_HOME} ] && mkdir -p ${GOSDK_HOME}
     export GOROOT=${GOSDK_CURRENT}
     export PATH=${PATH}:${GOROOT}/bin/
 }
