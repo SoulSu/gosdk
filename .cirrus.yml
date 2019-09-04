@@ -1,0 +1,8 @@
+
+task:
+  name: test (linux)
+  container:
+    image: golang:latest
+  init_script: source gosdk.sh && gosdk init
+  version_local_script: gosdk l local
+  version_use_script: gosdk u go1.11.1
