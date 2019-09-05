@@ -2,6 +2,7 @@ task:
   name: test (linux)
   container:
     image: soooooul/gosdk:latest
-  init_script: source gosdk.sh && gosdk init
+  source_script: source gosdk.sh 
+  init_script: gosdk init
   version_local_script: gosdk l local
   version_use_script: gosdk u go1.11.1
