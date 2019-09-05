@@ -2,5 +2,5 @@ task:
   name: test (linux)
   container:
     image: soooooul/gosdk:latest
-  build_script: ./.ci/script.sh
+  build_script: bash ./.ci/script.sh
 
