@@ -31,7 +31,9 @@ __gosdk_local_list(){
 }
 
 __gosdk_remote_list(){
-    echo "remote list"
+    echo "========================================================================"
+    curl "${remoteGo}" -s | grep "id=\"go" | cut -d "\"" -f 4
+    echo "========================================================================"
 }
 
 __gosdk__init(){
@@ -141,7 +143,19 @@ case $1 in
     ;;
     *)
 cat <<EOF
-    for help
+gosdk is a CLI library for go sdk download & change.
+
+Usage:
+   [command]
+
+Available Commands:
+  list          list remote or local go version
+  init          init set goroot path env
+  use           change go sdk version
+  download      download new go version
+  help          Help about any command
+
+Use " [command] --help" for more information about a command.
 EOF
     ;;
 esac
