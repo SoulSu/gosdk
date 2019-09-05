@@ -26,7 +26,7 @@ __gosdk_local_list(){
         else
             echo -e "\t$i"
         fi       
-    done"download os is [darwin|linux|windows|freebsd]"
+    done
     echo "========================================================================"
 }
 
