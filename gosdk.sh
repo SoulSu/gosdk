@@ -69,6 +69,9 @@ __gosdk__download(){
     x86_64)
       dArch="amd64"
       ;;
+    i386)
+        dArch="386"
+      ;;
     esac
 
     dExt=""
