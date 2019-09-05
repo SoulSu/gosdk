@@ -22,11 +22,11 @@ __gosdk_local_list(){
     echo "========================================================================"
     for i in `ls -1 ${GOSDK_HOME} | grep -v current` ; do
         if [ "${i}" = "${currentVersion}" ]; then
-            echo "\t$i [*] "
+            echo -e "\t$i [*] "
         else
-            echo "\t$i"
+            echo -e "\t$i"
         fi       
-    done
+    done"download os is [darwin|linux|windows|freebsd]"
     echo "========================================================================"
 }
 
@@ -51,8 +51,9 @@ __gosdk__download(){
         return 1
     fi
 
-    read -p "download arch is [amd64|arm64|386]" dArch
-    read -p "download os is [darwin|linux|windows|freebsd]" dOs
+    echo -n "download arch is [amd64|arm64|386] "; read -t 5 dArch
+
+    echo -n "download os is [darwin|linux|windows|freebsd] " ; read -t 5  dOs
 
     if [ "${dArch}" = "" ]; then
       dArch=$(arch)
@@ -91,8 +92,8 @@ __gosdk__download(){
     fi
 
 
-    cd -&>/dev/null
-    rm -rf ${tempDir}
+    cd - &>/dev/null
+    rm -rf ${tempDir} &>/dev/null
 }
 
 
