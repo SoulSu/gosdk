@@ -1,7 +1,3 @@
-#!/bin/sh
-
-set -e
-
 # import gosdk bash
 . gosdk.sh
 
