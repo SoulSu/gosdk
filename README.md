@@ -4,6 +4,9 @@ golang sdk 版本管理小工具
 
 可以自由下载 golang sdk 版本
 
+#### 终端简介
+
+[![asciicast](https://asciinema.org/a/266086.svg)](https://asciinema.org/a/266086)
 
 #### 安装方法
 
