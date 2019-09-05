@@ -1,4 +1,9 @@
+
 ### golang sdk download & version control tool
+
+
+[![Build Status](https://api.cirrus-ci.com/github/SoulSu/gosdk.svg)](https://cirrus-ci.com/github/SoulSu/gosdk)
+
 
 golang sdk 版本管理小工具
 
