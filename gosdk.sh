@@ -32,7 +32,7 @@ __gosdk_local_list(){
 
 __gosdk_remote_list(){
     echo "========================================================================"
-    curl "${remoteGo}" -s | grep "id=\"go" | cut -d "\"" -f 4
+    curl "${remoteGo}" -s | grep "id=\"go" | cut -d "\"" -f 4 | more
     echo "========================================================================"
 }
 
@@ -121,7 +121,7 @@ __gosdk__use(){
 
     rm ${GOSDK_CURRENT} &>/dev/null
 
-    cd ${GOSDK_HOME}; ln -s ${version} ${GOSDK_CURRENT}; cd &>/dev/null
+    cd ${GOSDK_HOME}; ln -s ${version} ${GOSDK_CURRENT}; cd - &>/dev/null
     return 0
 }
 
